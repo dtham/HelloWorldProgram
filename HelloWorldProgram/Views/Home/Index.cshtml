@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Hello World Program</h2>
+
+<div>
+    Click <input onclick="loadHelloWorldContent('Home/PrintHelloWorld')" type="button" value="here" class="btn btn-info" /> to print Hello World.
+</div>
+<div class="col-md-12"></div>
+<div>
+    Click <input onclick="window.open('/api/HelloWorld')" type="button" value="here" class="btn btn-primary" /> to call Hello World API.
+</div>
+
+
+<div class="modal fade" tabindex="-1" role="dialog" id="HelloWorldPostModal">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Results</h4>
+            </div>
+            <div class="modal-body" id="HelloWorldPostModalBody">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/HelloWorld.js")
+}
